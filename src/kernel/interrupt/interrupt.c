@@ -156,7 +156,7 @@ void interrupt_handler(struct task_context ctx)
 	case INTERRUPT_VECTOR_TIMER:
 	case INTERRUPT_VECTOR_KEYBOARD:
 	case INTERRUPT_VECTOR_SYSCALL:
-		break;
+		return syscall(cpu->task);
 	default:
 		break;
 	}
